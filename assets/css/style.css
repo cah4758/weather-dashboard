@@ -62,6 +62,11 @@ form button {
     min-height: 75%;
 }
 
+#date-title {
+    display: inline-flex;
+    align-items: center;
+}
+
 .forecast {
     margin: 10px;
 }

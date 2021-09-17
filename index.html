@@ -15,16 +15,24 @@
     <main class="container">
         <div class="search-container">
             <h1>Search for a City:</h1>
-            <form>
-                <input type="text" placeholder="Enter your destination">
+            <form id="search-form">
+                <input id="search-input" type="text" placeholder="Sarasota">
                 </input>
-                <button type="submit">Search</button>
+                <button id="searchBtn" type="submit">Search</button>
             </form>
-            <div class="past-searches">Previous Destinations:</div>
+            <div class="past-searches"></div>
         </div>
 
         <div class="weather-container">
-            <div class="todays-weather">what's going on today</div>
+            <div class="todays-weather">
+                <div id="date-title">
+                    <h1 id="city"> </h1><h2 id="today"> </h2><i id="icon">3</i>
+                </div>
+                <p>Temp: <span id="temp"></span></p>
+                <p>Wind: <span id="wind"></span>  MPH</p>
+                <p>Humidity: <span id="humidity"></span> %</p>
+                <p>UV Index: <span id="uv-index"></span></p>
+            </div>
             <div class="future-card">
                 <h3>5-Day Forecast:</h3>
                 <div class="forecast">

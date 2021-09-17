@@ -1,0 +1,81 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+header h1{
+    text-align: center;
+    padding: 5px;
+    margin: 0;
+    color: white;
+    background: linear-gradient(0.25turn, #0062ff, #26006d);
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
+
+.search-container,
+.weather-container {
+    margin: 10px;
+}
+
+.search-container {
+    width: 35vw;
+}
+
+.search-container h1 {
+    margin: 0;
+}
+
+form {
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+}
+
+form input {
+    height: 45px;
+    width: 100%;
+    font-size: large;
+    border-radius: 5px;
+}
+
+form button {
+    height: 35px;
+    width: 100%;
+    margin-top: 5px;
+    border-radius: 5px;
+    color: white;
+    background-color: #0062ff;
+    border: none;
+}
+
+.weather-container {
+    width: 60vw;
+}
+
+.todays-weather {
+    border: 1px solid black;
+    min-width: 60%;
+    min-height: 75%;
+}
+
+.forecast {
+    margin: 10px;
+}
+
+@media screen and (max-width: 425px) {
+
+    .container {
+        flex-direction: column;
+
+    }
+
+    .weather-container,
+    .search-container {
+        width: 90vw;
+    }
+
+}

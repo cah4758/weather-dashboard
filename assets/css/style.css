@@ -47,9 +47,12 @@ form button {
     width: 100%;
     margin-top: 5px;
     border-radius: 5px;
+    border: none;
+}
+
+#searchBtn {
     color: white;
     background-color: #0062ff;
-    border: none;
 }
 
 .weather-container {
@@ -96,8 +99,24 @@ form button {
     align-items: center;
 }
 
-.forecast {
+.todays-weather {
     margin: 10px;
+    max-height: 300px;
+}
+
+.forecast-container {
+    display:flex;
+}
+
+.future-card {
+    flex-direction: row;
+    box-sizing: border-box;
+    padding: 3px;
+    margin: 3px;
+    border-radius: 5px;
+    background-color: gray;
+    color: white;
+
 }
 
 @media screen and (max-width: 425px) {

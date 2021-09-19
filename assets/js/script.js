@@ -9,7 +9,7 @@ var tempSpan = document.getElementById("temp");
 var windSpan = document.getElementById("wind");
 var humSpan = document.getElementById("humidity");
 var uvSpan = document.getElementById("uv-index");
-var forecastEl = document.querySelector("future-card");
+var forecastEl = document.querySelector(".forecast-container");
 
 function searchFormSubmit(event) {
     event.preventDefault();
@@ -63,19 +63,20 @@ function searchFormSubmit(event) {
                     var iconUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`
                     weatherIcon.src = iconUrl;
 
+                    //Forecast cards loop
                     for (var index=1; index < 6; index++) {
                         var fCard = document.createElement("div");
-                        var fTemp = document.createElement("h3");
-                        var fWind = document.createElement("h3");
-                        var fHum = document.createElement("h3");
+                        fCard.classList.add("future-card");
+                        fCard.innerHTML = "";
+                        var fTemp = document.createElement("h4");
+                        fTemp.textContent = "Temp: " + data.daily[index].temp.day;
+                        var fWind = document.createElement("h4");
+                        fWind.textContent = "Wind: " + data.daily[index].wind_speed;
+                        var fHum = document.createElement("h4");
+                        fHum.textContent = "Humidity: " + data.daily[index].humidity;
                         var br = document.createElement("br");
 
-                        fCard.innerHTML = "";
-                        fTemp.textContent = data.daily[index].temp.day;
-                        fWind.textContent = data.daily[index].wind_speed;
-                        fHum.textContent = data.daily[index].humidity;
-
-                        fCard.append(fTemp, br, fWind, br, fHum);
+                        fCard.append(fTemp, fWind, fHum);
                         forecastEl.appendChild(fCard);
                     }
 
@@ -83,7 +84,4 @@ function searchFormSubmit(event) {
             });
 };
 
-
-
     searchForm.addEventListener('submit', searchFormSubmit);
-

@@ -58,8 +58,37 @@ form button {
 
 .todays-weather {
     border: 1px solid black;
+    padding: 4px;
     min-width: 60%;
     min-height: 75%;
+}
+
+#uv-index {
+    border-radius: 5px;
+    padding: 2px;
+    color: white;
+}
+
+.extreme{
+    background-color: purple;
+}
+
+.very-high{
+    background-color: red;
+}
+
+.high {
+    background-color: orange;
+    color: black;
+}
+
+.moderate {
+    background-color: yellow;
+    color: black;
+}
+
+.low {
+    background-color: green;
 }
 
 #date-title {

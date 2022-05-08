@@ -35,8 +35,7 @@ function searchFormSubmit(event) {
 
 function weatherLookUp(city) {
   // Taking city name and converting to lat and long
-  var latLonLkup = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${weatherAPI}`;
-  console.log(latLonLkup);
+  var latLonLkup = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${weatherAPI}`;
   forecastEl.innerHTML = "";
 
   // Using lat and long to access One Call API
@@ -47,7 +46,6 @@ function weatherLookUp(city) {
       var lon = data[0].lon;
 
       var searchUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&exclude=minutely,hourly,alerts&appid=${weatherAPI}`;
-      console.log(searchUrl);
 
       fetch(searchUrl)
         .then((response) => response.json())

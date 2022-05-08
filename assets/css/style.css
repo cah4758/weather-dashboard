@@ -1,6 +1,7 @@
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 0;
+    background-color: gray;
 }
 
 header h1{
@@ -55,6 +56,10 @@ form button {
     background-color: #0062ff;
 }
 
+.list-group {
+    background-color: none;
+}
+
 .weather-container {
     width: 60vw;
 }
@@ -63,7 +68,7 @@ form button {
     border: 1px solid black;
     padding: 4px;
     min-width: 60%;
-    min-height: 75%;
+    min-height: 50%;
 }
 
 #uv-index {
@@ -114,13 +119,13 @@ form button {
     padding: 3px;
     margin: 3px;
     border-radius: 5px;
-    background-color: gray;
+    background-color: navy;
     color: white;
-
+    border: 5px dashed black;
 }
 
-h3 {
-    color: black;
+h4 {
+    color: gray;
     text-decoration: underline;
 }
 
